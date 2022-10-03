@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulários</title>
+
+</head>
+<body >
+
+    <header>
+    <hr>
+    <h1 style="text-align: center;" >Formulários</h1>
+    <hr>
+    </header>
+
+    <br><br>
+    <form style="margin-left: 17%; font-size: 16pt" action="processar.php" method="post">
+
+        <div style="width:80%;">
+
+            <fieldset>
+
+                <legend>Dados Pessoais</legend><br>
+
+                <table>
+                    <tr>
+                        <td style="text-align: right;"><label for="nome">Nome:</label></td>
+                        <td><input type="text" id="nome" size="40" placeholder="Escreva nome e apelido" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: right; " valign="top"><label for="md">Morada:</label></td>
+                        <td><textarea id="md" rows="5" cols="60" required></textarea></td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align: right;"><label for="cpl">Código Postal:</label></td>
+                        <td><input type="text" pattern="[0-9]{4}-[0-9]{3}" id="cp" size="20" title="Valores inseridos invalidos" required></td>
+                            
+                    </tr>
+    
+                    <tr>
+                        <td style="text-align: right;"><label for="ld">Localidade:</label></td>
+                        <td><input type="text" id="ld" size="30" maxlength="" required></td>
+                    </tr>
+    
+                    <tr>
+                        <td style="text-align: right;"><label for="tel">Telefone:</label></td>
+                        <td><input type="tel" id="tel" size="20" required></td>
+                    </tr>
+    
+                    <tr>
+                        <td style="text-align: right;"><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" size="30" required></td>
+                    </tr>
+                </table>
+
+            </fieldset>
+            <br>
+            <fieldset>
+
+                <legend>Origem</legend><br>
+
+                <label>Nacionalidade:</label>
+                <br>
+                
+                <input type="radio" id="pta" checked name="Nacionalidade">
+                <label for="pta">Portuguesa</label>
+                <br>
+                <input  id="br" type="radio" name="Nacionalidade">
+                <label for="br">Brasileira</label>
+                <br>
+                <input id="esp" type="radio" name="Nacionalidade">
+                <label for="esp">Espanhola</label>
+                <br><br>
+
+                <label>Linguas faladas:</label>
+                <br>
+
+                <input id="pt" type="checkbox">
+                <label for="pt">Portugues</label>
+                <br>
+                <input id="es" type="checkbox">
+                <label for="es">Espanhol</label>
+                <br>
+                <input id="ing" type="checkbox">
+                <label for="ing">Ingles</label>
+                <br>
+                <input id="fc" type="checkbox">
+                <label for="fc">Frances</label>
+                <br>
+                <input id="alm" type="checkbox">
+                <label for="alm">Alemão</label>
+                <br>
+
+            </fieldset>
+            <br>
+            <fieldset>
+
+                <legend>Dados Profissionais</legend><br>
+
+                <label>Área profissional: </label>
+
+                <select name="Area profissional">
+                    <label >vsds</label> <option value="" selected>- escolha uma opção -</option>
+                    <option value="edc" >Educação</option>
+                    <option value="inf">Informática</option>
+                    <option value="gest"> Gestão</option>
+                    <option value="vend">Vendas</option>
+                    <option value="recur">Recursos Humanos</option>
+                    <option value="out">Outra.</option>
+                </select>
+                <br><br>
+                
+                <label>Função:</label>
+
+                <select name="Função" size="4">
+                   
+                    <option value="dir" >Direção</option>
+                    <option value="ger">Gerencia</option>
+                    <option value="sec">Secretariado</option>
+                    <option value="che">Chefia</option>
+                    
+                </select>
+
+            </fieldset>
+            <br>
+
+        </div>
+
+        <input style="margin-left: 30%;" type="reset" value="Limpar">&emsp;
+        <input type="submit">
+        
+    </form>
+    
+</body>
+</html>
